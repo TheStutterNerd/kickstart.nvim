@@ -112,11 +112,20 @@ require('lazy').setup({
     },
   },
 
-  { -- Theme inspired by Atom
-    'navarasu/onedark.nvim',
-    priority = 1000,
+  -- { -- Theme inspired by Atom
+  --   'navarasu/onedark.nvim',
+  --   priority = 1000,
+  --   config = function()
+  --     vim.cmd.colorscheme 'onedark'
+  --   end,
+  -- },
+  --
+  {
+    'AlphaTechnolog/pywal.nvim', as = 'pywal',
     config = function()
-      vim.cmd.colorscheme 'onedark'
+      local pywal = require('pywal')
+      pywal.setup()
+      vim.cmd.colorscheme 'pywal'
     end,
   },
 
@@ -126,7 +135,7 @@ require('lazy').setup({
     opts = {
       options = {
         icons_enabled = false,
-        theme = 'onedark',
+        theme = 'pywal',
         component_separators = '|',
         section_separators = '',
       },
