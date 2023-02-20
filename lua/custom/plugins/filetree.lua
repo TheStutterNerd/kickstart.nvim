@@ -7,9 +7,11 @@ return {
     "MunifTanjim/nui.nvim",
   },
   keys = { { "<leader>nn", "<cmd>NeoTreeFocusToggle<cr>", desc = "NeoTree Show Toggle" },
-           { "<leader>nf", "<cmd>NeoTreeFloatToggle<cr>", desc = "NeoTree Float Toggle" }
+           { "<leader>nf", "<cmd>NeoTreeFloatToggle<cr>", desc = "NeoTree Float Toggle" },
+           { "<leader>ng", "<cmd>Neotree source=git_status<cr>", desc = "NeoTree Git" },
+           { "<leader>nb", "<cmd>Neotree source=buffers<cr>", desc = "NeoTree Buffers" },
   },
-  
+
   config = {
     -- If a user has a sources list it will replace this one.
     -- Only sources listed here will be loaded.
@@ -21,7 +23,7 @@ return {
       "git_status",
     },
     add_blank_line_at_top = false, -- Add a blank line at the top of the tree.
-    close_if_last_window = false, -- Close Neo-tree if it is the last window left in the tab
+    close_if_last_window = true, -- Close Neo-tree if it is the last window left in the tab
     -- popup_border_style is for input and confirmation dialogs.
     -- Configurtaion of floating window is done in the individual source sections.
     -- "NC" is a special style that works well with NormalNC set
